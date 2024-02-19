@@ -5,7 +5,10 @@ import ProjectSection from "./projectSection";
 import PressSection from "./pressSection";
 import CategorySection from "./categorySection";
 import WorkflowSection from "./workflowSection";
-import CornerSection from "./CornerSection";
+import Spotlight from "./Spotlight";
+import Blogs from "./Blogs";
+import Feedback from "./Feedback";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -14,9 +17,12 @@ const Home = () => {
       <HeroSection />
       <ProjectSection />
       <PressSection />
-      <CategorySection />
       <WorkflowSection />
-      <CornerSection />
+      <CategorySection />
+      <Spotlight />
+      <Blogs />
+      <Feedback />
+      <Footer />
     </React.Fragment>
   );
 };

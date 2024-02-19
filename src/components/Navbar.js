@@ -68,11 +68,12 @@ function Navbar(props) {
     <AppBar
       position="fixed"
       sx={{
-        backgroundColor: theme.background.primary,
+        backgroundColor: theme.background.black,
         position: "fixed",
         top: 0,
         zIndex: 99,
         boxShadow: "none",
+        borderBottom: "1px solid white",
       }}
     >
       <Container sx={{ minWidth: "100%" }}>
@@ -86,24 +87,19 @@ function Navbar(props) {
             },
           }}
         >
-          <Box />
           <Box
             sx={{
-              position: "absolute",
-              top: 0,
-              left: 0,
               display: "flex",
               alignItems: "center",
+              justifyContent: "flex-start",
             }}
           >
-            <img src={Logo} alt="logo Images" />
+            <img src={Logo} alt="logo Images" style={{ width: "72px" }} />
             <Box style={{ textAlign: "center", fontSize: theme.fontSize.logo }}>
               InventOn <br />
               <span style={{ color: theme.colors.primary }}>BTC</span>
             </Box>
           </Box>
-          {/* <Link to="/">
-          </Link> */}
           <Box
             sx={{
               flexGrow: 1,
@@ -210,7 +206,6 @@ function Navbar(props) {
               </Box>
             ))}
           </Box>
-
           <Box
             sx={{
               display: { xs: "none", md: "flex" },

@@ -10,6 +10,20 @@ import Corner2 from "./assets/images/corner_2.png";
 import Corner3 from "./assets/images/corner_3.png";
 import Corner4 from "./assets/images/corner_4.png";
 
+import Project1 from "./assets/images/project_1.png";
+import Project2 from "./assets/images/project_2.png";
+import Project3 from "./assets/images/project_3.png";
+import Project4 from "./assets/images/project_4.png";
+
+import Founder1 from "./assets/images/founder_1.png";
+import Founder2 from "./assets/images/founder_2.png";
+import Founder3 from "./assets/images/founder_3.png";
+
+import Press2 from "./assets/images/press_2.png";
+
+import Blog1 from "./assets/images/blog_1.png";
+import Blog3 from "./assets/images/blog_2.png";
+
 export const sliderSettings = {
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -50,91 +64,102 @@ export const sliderSettings = {
 
 export const ProjectsData = [
   {
-    image: ProjectImg1,
-    title: "Quite Happy Without It: A Feature Film",
+    image: Project1,
+    title: "The world in shambles",
     content:
-      "Seeking funds for an independent drama about authenticity, the theatre, and the dangers of love.",
-    type: "FILM",
-    amout: "5,327",
+      "A Student Capstone Initiative Promoting Environmental Sustainability on our Public Lands.",
+    type: "Bitcoin Metaverse",
+    amout:
+      "<b>23000</b> <span style='opacity: 0.6; font-size: 10.44px'> STX raised </span>",
     percent: 67,
-    leftDays: "44",
+    leftDays: "24",
   },
+
   {
-    image: ProjectImg1,
-    title: "AKASO Seemore: AI Full-Color Night Vision Goggles",
+    image: Project2,
+    title: "Bwallet: Software wallet for Bitcoin",
     content:
-      "AI-ISP | Ultra-Low LIght Full-Color | 99$ Color Reproduction | 1640-3280ft Clear Vision | 4K Quality.",
-    type: "Travel & Outdoors",
-    amout: "250,652",
-    percent: 5013,
-    leftDays: "33",
+      "1 in 100 babies are born with a congenital heart condition. We want to show their stories.",
+    type: "wallets",
+    amout:
+      "<b>1.22</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
+    percent: 25,
+    leftDays: "60",
   },
+
   {
-    image: ProjectImg1,
-    title: "Skate to Hell - Horror Comedy Slasher Film",
+    image: Project3,
+    title: "Project eduBTC",
     content:
-      "An 80's Inspired Horror Comedy Slasher Film ($35,000 Stretch goal).",
-    type: "FILM",
-    amout: "33,090",
-    percent: 221,
-    leftDays: "37",
+      "A documentary about the life and death of a Brooklyn dive bar. Help me complete post-production!.",
+    type: "bitcoin education",
+    amout:
+      "<b>2.66</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
+    percent: 96,
+    leftDays: "27",
   },
+
   {
-    image: ProjectImg1,
-    title: "Journey To Eden",
+    image: Project4,
+    title: "MinePRO: A self mining suite for Bitcoin miners",
     content:
-      "Sci-Fi Rom-Com NYU short film with bits of magical relism set in San Jose, California.",
-    type: "FILM",
-    amout: "7980",
-    percent: 50,
-    leftDays: "17",
-  },
-  {
-    image: ProjectImg1,
-    title: "Quite Happy Without It: A Feature Film",
-    content:
-      "Seeking funds for an independent drama about authenticity, the theatre, and the dangers of love.",
-    type: "FILM",
-    amout: "5,327",
-    percent: 67,
-    leftDays: "44",
-  },
-  {
-    image: ProjectImg1,
-    title: "Quite Happy Without It: A Feature Film",
-    content:
-      "Seeking funds for an independent drama about authenticity, the theatre, and the dangers of love.",
-    type: "FILM",
-    amout: "5,327",
-    percent: 67,
-    leftDays: "44",
+      "CYBERFROG: HEARTSICK DELUXE Edition! Let's RACE with CYBERFROG! MINI-CARS!.",
+    type: "mining",
+    amout:
+      "<b>12.9</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
+    percent: 213,
+    leftDays: "2",
   },
 ];
 
 export const PressData = [
   {
-    image: ProjectImg1,
-    title: "10 Ways to Level Up Your Campaign Page in 2024",
+    image: Project2,
+    title: "Bwallet: Software wallet for Bitcoin",
     content:
-      "Are you a Creator looking to attract backers and enhance your project's story? This is the blueprint you need.",
+      "1 in 100 babies are born with a congenital heart  condition. We want to show their stories.",
+    type: "mining",
+    amout:
+      "<b>1.22</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
+    percent: 25,
+    leftDays: "60",
   },
   {
-    image: ProjectImg1,
+    image: Press2,
     title: "The Innovations that transformed InventBTC for Creators in 2023",
     content:
       "One years in review examines the products, updates, and partnerships that have helped shape InventBTC's future.",
+    type: "bitcoin games",
+    explain: "Snapdragon®G3x Gen2丨1GHz GPU丨Ultra Thin丨 6' 2K IPS Screen",
   },
   {
-    image: ProjectImg1,
+    image: Press2,
     title: "A Guide to Choose the Perfect Pledge Manager",
     content:
       "Utilizing a pledge manager survey tool can prove to be a cost-effective solution for expanding your campaign, offering an array of features that can make your life easier.",
+    type: "bitcoin games",
+    explain: "Snapdragon®G3x Gen2丨1GHz GPU丨Ultra Thin丨 6' 2K IPS Screen",
+  },
+];
+
+export const FounderData = [
+  {
+    image: Founder1,
+    title: "Why is InventOnBTC important for the Bitcoin ecosystem?",
+    content:
+      "A Student Capstone Initiative Promoting Environmental Sustainability on our Public Lands.",
   },
   {
-    image: ProjectImg1,
-    title: "The Benefits of Crowdfunding for Entrepreneurs",
+    image: Founder2,
+    title: "Behind Liquidium’s success.",
     content:
-      "Entrepreneurs benefit greatly from crowdfunding as it provides access to a larger pool of potential investors who may not have been avaiable otheriwse.",
+      "A Student Capstone Initiative Promoting Environmental Sustainability on our Public Lands.",
+  },
+  {
+    image: Founder3,
+    title: "Bison Labs bringing ZK rollups on BTC",
+    content:
+      "A Student Capstone Initiative Promoting Environmental Sustainability on our Public Lands.",
   },
 ];
 
@@ -189,5 +214,55 @@ export const BackerData = [
     title: "Deal 3",
     content:
       "Track the funding progress with a visually appealing progress bar. See how close the project is to reaching its goal.",
+  },
+];
+
+export const FeedbackData = [
+  {
+    title: "John Smith",
+    content:
+      "I couldn't be happier with the results I achieved through this crowdfunding platform. It provided me with the necessary funds to turn my startup idea into a reality. The support and guidance I received from the platform's team were exceptional. Highly recommended!",
+  },
+  {
+    title: "John Smith",
+    content:
+      "I couldn't be happier with the results I achieved through this crowdfunding platform. It provided me with the necessary funds to turn my startup idea into a reality. The support and guidance I received from the platform's team were exceptional. Highly recommended!",
+  },
+  {
+    title: "John Smith",
+    content:
+      "I couldn't be happier with the results I achieved through this crowdfunding platform. It provided me with the necessary funds to turn my startup idea into a reality. The support and guidance I received from the platform's team were exceptional. Highly recommended!",
+  },
+  {
+    title: "John Smith",
+    content:
+      "I couldn't be happier with the results I achieved through this crowdfunding platform. It provided me with the necessary funds to turn my startup idea into a reality. The support and guidance I received from the platform's team were exceptional. Highly recommended!",
+  },
+  {
+    title: "John Smith",
+    content:
+      "I couldn't be happier with the results I achieved through this crowdfunding platform. It provided me with the necessary funds to turn my startup idea into a reality. The support and guidance I received from the platform's team were exceptional. Highly recommended!",
+  },
+  {
+    title: "John Smith",
+    content:
+      "I couldn't be happier with the results I achieved through this crowdfunding platform. It provided me with the necessary funds to turn my startup idea into a reality. The support and guidance I received from the platform's team were exceptional. Highly recommended!",
+  },
+];
+export const BlogData = [
+  {
+    image: Blog1,
+    title: "The Rise of the Bitcoin Economy",
+    content: "Now you can give the gift of crowdfunding.",
+  },
+  {
+    image: Blog1,
+    title: "The UTXO problem",
+    content: "Does the AYANEO KUN live up to the hype?",
+  },
+  {
+    image: Blog3,
+    title: "Programming BTC for the new age",
+    content: "Putting the new AYANEO Pocket Air to the test!",
   },
 ];

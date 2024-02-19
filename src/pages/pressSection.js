@@ -17,6 +17,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import PressCard from "../components/PressCard";
+import ProjectCard from "../components/ProjectCard";
 
 import { sliderSettings, PressData } from "../constant";
 
@@ -38,15 +39,50 @@ const PressSection = () => {
         <h1
           style={{
             fontSize: theme.fontSize.subTitle,
-            textAlign: "center",
-            color: theme.colors.primary,
             marginBottom: theme.gaps[3],
             textTransform: "uppercase",
           }}
         >
-          Hot Off The Press
+          CURATED PROJECTS
         </h1>
-        <Slider {...sliderSettings}>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: isMobile
+              ? "minmax(0, 1fr)"
+              : "minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)",
+            gap: "97px",
+          }}
+        >
+          {PressData.map((item, index) => {
+            if (index === 0) {
+              return (
+                <ProjectCard
+                  key={index}
+                  image={item.image}
+                  title={item.title}
+                  content={item.content}
+                  type={item.type}
+                  amount={item.amout}
+                  percent={item.percent}
+                  leftDays={item.leftDays}
+                />
+              );
+            } else {
+              return (
+                <PressCard
+                  key={index}
+                  image={item.image}
+                  title={item.title}
+                  content={item.content}
+                  type={item.type}
+                  explain={item.explain}
+                />
+              );
+            }
+          })}
+        </Box>
+        {/* <Slider {...sliderSettings}>
           {PressData.map((item, index) => (
             <PressCard
               key={index}
@@ -55,7 +91,7 @@ const PressSection = () => {
               content={item.content}
             />
           ))}
-        </Slider>
+        </Slider> */}
       </Box>
     </React.Fragment>
   );

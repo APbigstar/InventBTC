@@ -19,7 +19,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 import LaunchIcon from "../assets/images/launch_icon.png";
 
-const PressCard = (props) => {
+const FounderCard = (props) => {
   const theme = useTheme();
   const navigate = useNavigate();
   const isMobile = useMediaQuery("(max-width:430px)");
@@ -41,10 +41,15 @@ const PressCard = (props) => {
               mb: theme.gaps[2],
             }}
           >
-            <p style={{ color: theme.colors.green, fontWeight: 900 }}>
-              FUNDING
+            <p
+              style={{
+                color: theme.colors.blue,
+                fontWeight: 900,
+                textTransform: "uppercase",
+              }}
+            >
+              interview
             </p>
-            <FavoriteBorderIcon />
           </Box>
           <p
             style={{
@@ -63,42 +68,10 @@ const PressCard = (props) => {
           >
             {props.content}
           </p>
-          <p
-            style={{
-              marginBottom: theme.gaps[2],
-              opacity: 0.5,
-              textTransform: "uppercase",
-              mb: "14px",
-            }}
-          >
-            {props.type}
-          </p>
-          <p
-            style={{
-              fontSize: theme.fontSize.xsmall,
-              opacity: 0.6,
-              marginBottom: "17px",
-            }}
-          >
-            {props.explain}
-          </p>
-          <Box sx={{ ...theme.container, justifyContent: "flex-start" }}>
-            <img src={LaunchIcon} alt="Icon" />
-            <p
-              style={{
-                fontSize: "11.6px",
-                opacity: 0.6,
-                marginLeft: "11px",
-                marginBottom: "11px",
-              }}
-            >
-              Launching Soon
-            </p>
-          </Box>
         </Box>
       </Box>
     </React.Fragment>
   );
 };
 
-export default PressCard;
+export default FounderCard;

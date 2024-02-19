@@ -29,9 +29,8 @@ const ProjectCard = (props) => {
     <React.Fragment>
       <Box
         sx={{
-          width: "400px",
+          width: "366px",
           border: "1px solid gray",
-          margin: "auto",
           cursor: "pointer",
         }}
         onClick={() => navigate("/project_detail")}
@@ -49,8 +48,10 @@ const ProjectCard = (props) => {
               mb: theme.gaps[2],
             }}
           >
-            <p style={{ color: theme.colors.secondary }}>FUNDING</p>
-            <FavoriteBorderIcon />
+            <p style={{ color: theme.colors.green, fontWeight: "900" }}>
+              FUNDING
+            </p>
+            <FavoriteBorderIcon sx={{ opacity: 0.4 }} />
           </Box>
           <p
             style={{
@@ -69,19 +70,26 @@ const ProjectCard = (props) => {
           >
             {props.content}
           </p>
-          <p style={{ marginBottom: theme.gaps[2] }}>{props.type}</p>
+          <p
+            style={{ marginBottom: theme.gaps[2], textTransform: "uppercase" }}
+          >
+            {props.type}
+          </p>
           <Box sx={{ ...theme.container, justifyContent: "space-between" }}>
-            <p>
+            <div style={{ fontSize: theme.fontSize.xsmall }}>
               <span
-                style={{ fontSize: theme.fontSize.content, fontWeight: "bold" }}
+                style={{ fontSize: theme.fontSize.small, fontWeight: "bold" }}
               >
-                ${props.amount}
+                <div dangerouslySetInnerHTML={{ __html: props.amount }}></div>
               </span>
-              USD raised
-            </p>
+            </div>
             <p>
               <span
-                style={{ fontSize: theme.fontSize.content, fontWeight: "bold" }}
+                style={{
+                  fontSize: theme.fontSize.xsmall,
+                  fontWeight: "bold",
+                  opacity: 0.6,
+                }}
               >
                 {props.percent}%
               </span>
@@ -102,7 +110,7 @@ const ProjectCard = (props) => {
           />
           <Box sx={{ ...theme.container, justifyContent: "flex-start" }}>
             <AccessTimeIcon sx={{ marginRight: "7px" }} />
-            <p>{props.leftDays}days left</p>
+            <p style={{ marginBottom: "11px" }}>{props.leftDays}days left</p>
           </Box>
         </Box>
       </Box>

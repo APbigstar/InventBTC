@@ -14,6 +14,8 @@ import {
 } from "@mui/material";
 
 import HeroImg from "../assets/images/hero_img.png";
+import Coin1 from "../assets/images/coin_1.png";
+import Coin2 from "../assets/images/coin_2.png";
 
 const HeroSection = () => {
   const theme = useTheme();
@@ -24,6 +26,7 @@ const HeroSection = () => {
     <React.Fragment>
       <Box
         sx={{
+          position: "relative",
           ...theme.container,
           background: theme.background.primary,
           justifyContent: "space-between",
@@ -38,7 +41,7 @@ const HeroSection = () => {
               marginBottom: theme.gaps[2],
             }}
           >
-            Welcome to the Future <br /> of Crowdfunding
+            Crowdfunding for <br /> Bitcoin start-ups
           </h1>
           <p
             style={{
@@ -50,23 +53,55 @@ const HeroSection = () => {
             Join the revolution and support groundbreaking Bitcoin based
             projects
           </p>
-          <Button
-            className="navbar-item"
-            variant="contained"
+          <Box
             sx={{
-              ...theme.buttons.primary,
+              ...theme.container,
+              justifyContent: "flex-start",
+              gap: theme.gaps[2],
             }}
           >
-            <span
-              style={{
-                display: isMobile ? "none" : "inline",
+            <Button
+              className="navbar-item"
+              variant="contained"
+              sx={{
+                ...theme.buttons.primary,
               }}
             >
-              Get Started
-            </span>
-          </Button>
+              <span
+                style={{
+                  display: isMobile ? "none" : "inline",
+                }}
+              >
+                Get Started
+              </span>
+            </Button>
+            <Button
+              className="navbar-item"
+              variant="outlined"
+              sx={{
+                ...theme.buttons.secondary,
+              }}
+            >
+              <span
+                style={{
+                  display: isMobile ? "none" : "inline",
+                }}
+              >
+                Get Started
+              </span>
+            </Button>
+          </Box>
         </Box>
         <img src={HeroImg} alt="Hero Image" />
+        <Box sx={{ position: "absolute", left: "121px", bottom: "76px" }}>
+          <p style={{ color: theme.colors.white, marginBottom: theme.gaps[1] }}>
+            Fund with
+          </p>
+          <Box sx={{ ...theme.container, gap: theme.gaps[2] }}>
+            <img src={Coin1} alt="Coin Icon" />
+            <img src={Coin2} alt="Coin Icon" />
+          </Box>
+        </Box>
       </Box>
     </React.Fragment>
   );

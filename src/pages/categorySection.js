@@ -13,7 +13,7 @@ import {
   MenuItem,
 } from "@mui/material";
 
-import CategoryLogo from "../assets/images/category_logo.png";
+import CategoryLogo from "../assets/images/Footer_logo.png";
 
 import { CategoryData } from "../constant";
 

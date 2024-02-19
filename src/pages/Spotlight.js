@@ -16,11 +16,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import ProjectCard from "../components/ProjectCard";
+import FounderCard from "../components/FounderCard";
 
-import { sliderSettings, ProjectsData } from "../constant";
+import { FounderData } from "../constant";
 
-const ProjectSection = () => {
+const Spotlight = () => {
   const theme = useTheme();
   const navigate = useNavigate();
   const isMobile = useMediaQuery("(max-width:430px)");
@@ -36,16 +36,27 @@ const ProjectSection = () => {
       >
         <h1
           style={{
-            fontSize: theme.fontSize.subTitle,
-            textAlign: "left",
-            color: theme.colors.black,
-            marginBottom: theme.gaps[3],
-            textTransform: "uppercase",
-            fontWeight: "900",
+            fontSize: "64px",
+            textTransform: 900,
+            marginBottom: theme.gaps[2],
           }}
         >
-          TRENDING PROJECTS
+          Spotlight
         </h1>
+        <h2
+          style={{
+            fontSize: theme.fontSize.subTitle,
+            textTransform: 900,
+            marginBottom: theme.gaps[2],
+          }}
+        >
+          Founder interviews
+        </h2>
+        <p style={{ fontSize: "11.6px", lineHeight: "18px" }}>
+          Get insights on the founders behind the projects on <br />{" "}
+          InventOnBTC. Dive deep into their vision behind <br /> their ideas and
+          innovations
+        </p>
         <Box
           sx={{
             display: "grid",
@@ -53,27 +64,23 @@ const ProjectSection = () => {
               ? "minmax(0, 1fr)"
               : "minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)",
             gap: "97px",
+            marginTop: "65px",
           }}
         >
-          {ProjectsData.map((item, index) => (
-            <ProjectCard
-              key={index}
-              image={item.image}
-              title={item.title}
-              content={item.content}
-              type={item.type}
-              amount={item.amout}
-              percent={item.percent}
-              leftDays={item.leftDays}
-            />
-          ))}
+          {FounderData.map((item, index) => {
+            return (
+              <FounderCard
+                key={index}
+                image={item.image}
+                title={item.title}
+                content={item.content}
+              />
+            );
+          })}
         </Box>
-        {/* <Slider {...sliderSettings}>
-          
-        </Slider> */}
       </Box>
     </React.Fragment>
   );
 };
 
-export default ProjectSection;
+export default Spotlight;

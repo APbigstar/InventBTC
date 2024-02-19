@@ -22,7 +22,6 @@ const WorkflowSection = () => {
     <React.Fragment>
       <Box
         sx={{
-          py: theme.gaps[3],
           px: theme.gaps[5],
         }}
       >
