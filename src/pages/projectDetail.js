@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
 import {
   Box,
@@ -19,7 +19,12 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import BackerCard from "../components/BackerCard";
+
+import Coin1 from "../assets/images/coin_1.png";
+import Coin2 from "../assets/images/coin_2.png";
+import LinkIcon from "../assets/images/link_icon.png";
 
 import { BackerData } from "../constant";
 
@@ -28,8 +33,16 @@ import ProjectDetailImg from "../assets/images/project_detail.png";
 const ProjectDetail = () => {
   const theme = useTheme();
   const navigate = useNavigate();
+  const location = useLocation();
   const isMobile = useMediaQuery("(max-width:430px)");
   const isSmallMobile = useMediaQuery("(max-width:375px)");
+  const [image, setImage] = React.useState("");
+  const [title, setTitle] = React.useState("");
+
+  React.useEffect(() => {
+    setImage(localStorage.getItem("selectedProjectImage"));
+    setTitle(localStorage.getItem("selectedProjectTitle"));
+  }, []);
 
   return (
     <React.Fragment>
@@ -39,14 +52,13 @@ const ProjectDetail = () => {
           sx={{
             ...theme.container,
             alignItems: "stretch",
-            justifyContent: "space-between",
             pt: theme.gaps[6],
             mb: theme.gaps[6],
           }}
         >
           <img
-            style={{ width: "60%" }}
-            src={ProjectDetailImg}
+            style={{ width: "695px", height: "523px" }}
+            src={image}
             alt="Project Detail"
           />
           <Box sx={{ width: "40%", pl: theme.gaps[3] }}>
@@ -59,7 +71,7 @@ const ProjectDetail = () => {
                 textTransform: "uppercase",
               }}
             >
-              Ajasi Seemor: AI Full-Color Night Vision Googles
+              {title}
             </h1>
             <p
               style={{
@@ -67,8 +79,8 @@ const ProjectDetail = () => {
                 fontSize: theme.fontSize.medium,
               }}
             >
-              AI-ISP | Ultra-Low Light Full-Color | 99% Color Reproduction |
-              1640-3280ft Clear Vision | 4K Quality
+              Bringing an easy to use Bitcoin Wallet with ordinals , BRC20 and
+              Stamps integration
             </p>
             <Box
               sx={{
@@ -85,10 +97,10 @@ const ProjectDetail = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  AKASO Seemor
+                  Ava InnLead
                 </p>
                 <p style={{ fontSize: theme.fontSize.content }}>
-                  1 Campaign | FREDERICK, United States
+                  3 Campaigns | Hongkong, Hong Kong
                 </p>
               </Box>
             </Box>
@@ -98,11 +110,12 @@ const ProjectDetail = () => {
                   style={{
                     fontSize: theme.fontSize.content,
                     fontWeight: "bold",
+                    marginRight: "11px",
                   }}
                 >
-                  $254,994
+                  1.22
                 </span>
-                USD
+                ₿TC raised
               </p>
               <p>
                 <span
@@ -111,7 +124,7 @@ const ProjectDetail = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  1,205 backers
+                  4 ₿TC goal
                 </span>
               </p>
             </Box>
@@ -125,7 +138,7 @@ const ProjectDetail = () => {
                   display: "none",
                 },
               }}
-              defaultValue={100}
+              defaultValue={4}
               valueLabelDisplay="auto"
             />
             <Box
@@ -136,10 +149,11 @@ const ProjectDetail = () => {
               }}
             >
               <p>
-                5098% of $5,000{" "}
-                <span style={{ fontWeight: "bold" }}>Flexible Goal</span>
+                <span style={{ fontWeight: "bold" }}>1.22 BTC </span>
+                by 239 backers
+                <br />
+                1.22 BTC funded of 4 BTC goal
               </p>
-              <p>33 days left</p>
             </Box>
             <Box sx={{ ...theme.container, justifyContent: "space-between" }}>
               <Box
@@ -149,6 +163,10 @@ const ProjectDetail = () => {
                   gap: theme.gaps[2],
                 }}
               >
+                <Box sx={{ ...theme.container, gap: theme.gaps[2] }}>
+                  <img src={Coin1} alt="Coin Icon" />
+                  <img src={Coin2} alt="Coin Icon" />
+                </Box>
                 <Button
                   className="navbar-item"
                   variant="contained"
@@ -161,30 +179,7 @@ const ProjectDetail = () => {
                       display: isMobile ? "none" : "inline",
                     }}
                   >
-                    See Options
-                  </span>
-                </Button>
-                <Button
-                  startIcon={<FavoriteBorderIcon />}
-                  className="navbar-item"
-                  variant="outlined"
-                  sx={{
-                    ...theme.buttons.primary,
-                    backgroundColor: "#ffffff",
-                    color: theme.colors.primary,
-                    borderColor: theme.colors.primary,
-                    "&:hover": {
-                      backgroundColor: "#ffffff",
-                      borderColor: theme.colors.primary,
-                    },
-                  }}
-                >
-                  <span
-                    style={{
-                      display: isMobile ? "none" : "inline",
-                    }}
-                  >
-                    Follow
+                    Fund Now
                   </span>
                 </Button>
               </Box>
@@ -195,8 +190,9 @@ const ProjectDetail = () => {
                   gap: theme.gaps[2],
                 }}
               >
-                <FacebookIcon />
-                <TwitterIcon />
+                <FacebookIcon sx={{ opacity: 0.6 }} />
+                <TwitterIcon sx={{ opacity: 0.6 }} />
+                <img src={LinkIcon} alt="Icon" />
               </Box>
             </Box>
           </Box>
@@ -459,6 +455,7 @@ const ProjectDetail = () => {
           </Box>
         </Box>
       </Box>
+      <Footer />
     </React.Fragment>
   );
 };

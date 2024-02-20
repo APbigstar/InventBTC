@@ -25,6 +25,12 @@ const ProjectCard = (props) => {
   const isMobile = useMediaQuery("(max-width:430px)");
   const isSmallMobile = useMediaQuery("(max-width:375px)");
 
+  const handleRedirectProjectDetail = () => {
+    localStorage.setItem("selectedProjectImage", props.image);
+    localStorage.setItem("selectedProjectTitle", props.title);
+    navigate(`/project_detail/`);
+  };
+
   return (
     <React.Fragment>
       <Box
@@ -33,7 +39,7 @@ const ProjectCard = (props) => {
           border: "1px solid gray",
           cursor: "pointer",
         }}
-        onClick={() => navigate("/project_detail")}
+        onClick={handleRedirectProjectDetail}
       >
         <img
           style={{ width: "100%", margin: "auto" }}

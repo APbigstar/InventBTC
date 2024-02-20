@@ -7,6 +7,7 @@ const themeSettings = createTheme({
     black: "#000000",
     footer: "#FFF0E5",
     white: "#ffffff",
+    sectionColor: "#E6E7E9",
   },
   colors: {
     primary: "#D88327",

@@ -6,6 +6,8 @@ import { ThemeProvider } from "@mui/material/styles";
 import themeSettings from "./theme";
 import Home from "./pages/home";
 import ProjectDetail from "./pages/projectDetail";
+import BackerSection from "./pages/BackerSection";
+import StartupSection from "./pages/StartupSection";
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings));
@@ -19,6 +21,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/project_detail" element={<ProjectDetail />} />
+        <Route exact path="/backer" element={<BackerSection />} />
+        <Route exact path="/startup" element={<StartupSection />} />
       </Routes>
     </ThemeProvider>
   );

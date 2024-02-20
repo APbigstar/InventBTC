@@ -24,6 +24,11 @@ import Press2 from "./assets/images/press_2.png";
 import Blog1 from "./assets/images/blog_1.png";
 import Blog3 from "./assets/images/blog_2.png";
 
+import Resource1 from "./assets/images/resource_1.png";
+import Resource2 from "./assets/images/resource_2.png";
+import Resource3 from "./assets/images/resource_3.png";
+import Resource4 from "./assets/images/resource_4.png";
+
 export const sliderSettings = {
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -109,6 +114,43 @@ export const ProjectsData = [
       "<b>12.9</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
     percent: 213,
     leftDays: "2",
+  },
+];
+export const ProjectsFundData = [
+  {
+    image: Project1,
+    title: "The world in shambles",
+    content:
+      "A Student Capstone Initiative Promoting Environmental Sustainability on our Public Lands.",
+    type: "Bitcoin Metaverse",
+    amout:
+      "<b>23000</b> <span style='opacity: 0.6; font-size: 10.44px'> STX raised </span>",
+    percent: 67,
+    leftDays: "24",
+  },
+
+  {
+    image: Project2,
+    title: "Bwallet: Software wallet for Bitcoin",
+    content:
+      "1 in 100 babies are born with a congenital heart condition. We want to show their stories.",
+    type: "wallets",
+    amout:
+      "<b>1.22</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
+    percent: 25,
+    leftDays: "60",
+  },
+
+  {
+    image: Project3,
+    title: "Project eduBTC",
+    content:
+      "A documentary about the life and death of a Brooklyn dive bar. Help me complete post-production!.",
+    type: "bitcoin education",
+    amout:
+      "<b>2.66</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
+    percent: 96,
+    leftDays: "27",
   },
 ];
 
@@ -264,5 +306,28 @@ export const BlogData = [
     image: Blog3,
     title: "Programming BTC for the new age",
     content: "Putting the new AYANEO Pocket Air to the test!",
+  },
+];
+
+export const ResourceData = [
+  {
+    image: Resource1,
+    title: "Read about Ordinals and BRC20 tools....",
+    content: "Now you can give the gift of crowdfunding.",
+  },
+  {
+    image: Resource2,
+    title: "How to Inscribe...",
+    content: "Putting the new AYANEO Pocket Air to the test!",
+  },
+  {
+    image: Resource3,
+    title: "Navigating the new protocols on Bitcoin",
+    content: "Does the AYANEO KUN live up to the hype?",
+  },
+  {
+    image: Resource4,
+    title: "The UTXO problem",
+    content: "Does the AYANEO KUN live up to the hype?",
   },
 ];

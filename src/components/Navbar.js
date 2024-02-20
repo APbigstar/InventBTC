@@ -92,7 +92,9 @@ function Navbar(props) {
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-start",
+              cursor: "pointer",
             }}
+            onClick={() => navigate("/")}
           >
             <img src={Logo} alt="logo Images" style={{ width: "72px" }} />
             <Box style={{ textAlign: "center", fontSize: theme.fontSize.logo }}>

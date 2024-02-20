@@ -65,14 +65,16 @@ const HeroSection = () => {
               variant="contained"
               sx={{
                 ...theme.buttons.primary,
+                textTransform: "none",
               }}
+              onClick={() => navigate("/backer")}
             >
               <span
                 style={{
                   display: isMobile ? "none" : "inline",
                 }}
               >
-                Get Started
+                For Backers
               </span>
             </Button>
             <Button
@@ -80,14 +82,16 @@ const HeroSection = () => {
               variant="outlined"
               sx={{
                 ...theme.buttons.secondary,
+                textTransform: "none",
               }}
+              onClick={() => navigate("/startup")}
             >
               <span
                 style={{
                   display: isMobile ? "none" : "inline",
                 }}
               >
-                Get Started
+                For Startups
               </span>
             </Button>
           </Box>
